@@ -135,19 +135,7 @@ class FixedRateMortgage:
 
 
 if __name__ == "__main__":
-
     loan = 200_000
 
-    # euribor_updater = NaiveEuriborUpdater(
-    #    initial_value=-0.00558, euribor_yearly_increment=0.001
-    # )
-    # mortgage1 = VariableRateMortgage(
-    #    differential=0.007,
-    #    loan=loan,
-    #    output_file_name="class_test.txt",
-    #    periods=30 * 12,
-    #    euribor_updater=euribor_updater,
-    # )
-    # mortgage1.simulate()
-    fija = FixedRateMortgage(0.01, 200_000, "fija.txt")
+    fija = FixedRateMortgage(0.01, loan, "fija.txt")
     fija.simulate()
